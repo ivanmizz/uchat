@@ -1,0 +1,12 @@
+{
+  "name": "uchat",
+  "version": "1.0.0",
+  "description": "a simple chat app",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "ivan",
+  "license": "ISC",
+  "keywords": []
+}
