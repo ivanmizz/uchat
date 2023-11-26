@@ -8,5 +8,8 @@
   },
   "author": "ivan",
   "license": "ISC",
-  "keywords": []
+  "keywords": [],
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
 }
