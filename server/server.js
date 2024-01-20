@@ -1,27 +1,23 @@
-const express = require("express");
-const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
-const dotenv = require("dotenv");
-dotenv.config();
-
+// server/server.js
+const express = require('express');
 const cors = require('cors');
+const connectDB = require('./config/db');
+const chatRoutes = require('./routes/chatRoutes');
 
 const app = express();
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors());
 app.use(express.json());
 
-// MongoDB connection
-mongoose.connect('your_mongodb_connection_string', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
+// Connect to MongoDB
+connectDB();
+
+// Routes
+app.use('/api/chat', chatRoutes);
+
+// Start the server
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
-
-// Routes (add your chat-related routes here)
-
-
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
-  });
