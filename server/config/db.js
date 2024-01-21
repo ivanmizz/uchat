@@ -1,9 +1,11 @@
 // server/config/db.js
 const mongoose = require('mongoose');
 
+const mongoURI = 'process.env.MONGO_URI';
+
 const connectDB = async () => {
   try {
-    await mongoose.connect('mongodb://localhost:27017/uchat', {
+    await mongoose.connect(mongoURI , {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useCreateIndex: true,
