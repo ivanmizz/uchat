@@ -1,0 +1,5 @@
+# ignore node modules
+server/node_modules
+
+#ignore api keys
+server/.env
