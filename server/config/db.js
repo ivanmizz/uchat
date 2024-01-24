@@ -1,5 +1,7 @@
 // server/config/db.js
 const mongoose = require('mongoose');
+import dotenv from 'dotenv';
+dotenv.config();
 
 const mongoURI = process.env.MONGO_URI;
 
